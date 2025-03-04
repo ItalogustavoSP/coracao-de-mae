@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coração de Mãe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logotipo Coração de Mãe">
+                <h1>Coração de Mãe</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- No HTML, dentro da seção hero -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h2 class="hero-title">Descubra o Sabor que Vem do <span>Coração</span></h2>
+        <p class="hero-subtitle">Experiências gastronômicas que remetem ao aconchego do lar</p>
+        <a href="#cardapio" class="btn">Ver Cardápio Completo</a>
+    </div>
+</section>
+
+    <section id="cardapio" class="menu">
+        <h2></h2>
+        <div class="menu-tabs">
+            <button class="tab-button active" data-category="carnes">Carnes</button>
+            <button class="tab-button" data-category="frutos-do-mar">Frutos do Mar</button>
+            <button class="tab-button" data-category="massas">Massas</button>
+            <button class="tab-button" data-category="sobremesas">Sobremesas</button>
+            <button class="tab-button" data-category="bebidas">Bebidas</button>
+        </div>
+        <div class="menu-items">
+            <!-- Carnes -->
+            <div class="menu-category carnes active">
+                <div class="menu-item">
+                    <img src="file-mignon.jpg" alt="Filé Mignon">
+                    <h3>Filé Mignon</h3>
+                    <p>Filé mignon grelhado, servido com molho de vinho tinto.</p>
+                    <span class="price">R$ 120,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="picanha.jpg" alt="Picanha Grelhada">
+                    <h3>Picanha Grelhada</h3>
+                    <p>Picanha suculenta grelhada na chapa.</p>
+                    <span class="price">R$ 110,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="costela.jpg" alt="Costela Assada">
+                    <h3>Costela Assada</h3>
+                    <p>Costela bovina assada lentamente, servida com batatas.</p>
+                    <span class="price">R$ 95,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="frango-grelhado.jpg" alt="Frango Grelhado">
+                    <h3>Frango Grelhado</h3>
+                    <p>Peito de frango grelhado com ervas finas.</p>
+                    <span class="price">R$ 50,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="strogonoff.jpg" alt="Strogonoff de Carne">
+                    <h3>Strogonoff de Carne</h3>
+                    <p>Strogonoff de carne com arroz e batata palha.</p>
+                    <span class="price">R$ 65,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="hamburguer.jpg" alt="Hambúrguer Artesanal">
+                    <h3>Hambúrguer Artesanal</h3>
+                    <p>Hambúrguer de carne Angus com queijo cheddar e bacon.</p>
+                    <span class="price">R$ 42,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="carne-de-sol.jpg" alt="Carne de Sol">
+                    <h3>Carne de Sol</h3>
+                    <p>Carne de sol acebolada, servida com mandioca.</p>
+                    <span class="price">R$ 75,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="espeto-carne.jpg" alt="Espeto de Carne">
+                    <h3>Espeto de Carne</h3>
+                    <p>Espeto de carne bovina com legumes grelhados.</p>
+                    <span class="price">R$ 60,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="bife-acebolado.jpg" alt="Bife Acebolado">
+                    <h3>Bife Acebolado</h3>
+                    <p>Bife acebolado com arroz e feijão.</p>
+                    <span class="price">R$ 55,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="carne-assada.jpg" alt="Carne Assada">
+                    <h3>Carne Assada</h3>
+                    <p>Carne assada lentamente, servida com purê de batata.</p>
+                    <span class="price">R$ 85,00</span>
+                </div>
+            </div>
+            <!-- Frutos do Mar -->
+            <div class="menu-category frutos-do-mar">
+                <div class="menu-item">
+                    <img src="camarao-alho-oleo.jpg" alt="Camarão ao Alho e Óleo">
+                    <h3>Camarão ao Alho e Óleo</h3>
+                    <p>Camarões frescos refogados no alho e azeite extra virgem.</p>
+                    <span class="price">R$ 85,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="moqueca-peixe.jpg" alt="Moqueca de Peixe">
+                    <h3>Moqueca de Peixe</h3>
+                    <p>Peixe fresco cozido no leite de coco e azeite de dendê.</p>
+                    <span class="price">R$ 95,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="sushi.jpg" alt="Sushi Variado">
+                    <h3>Sushi Variado</h3>
+                    <p>Combinação de sushis e sashimis frescos.</p>
+                    <span class="price">R$ 80,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="polvo-grelhado.jpg" alt="Polvo Grelhado">
+                    <h3>Polvo Grelhado</h3>
+                    <p>Polvo grelhado com azeite e ervas finas.</p>
+                    <span class="price">R$ 90,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="lagosta.jpg" alt="Lagosta Grelhada">
+                    <h3>Lagosta Grelhada</h3>
+                    <p>Lagosta grelhada com manteiga de ervas.</p>
+                    <span class="price">R$ 150,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="peixe-frito.jpg" alt="Peixe Frito">
+                    <h3>Peixe Frito</h3>
+                    <p>Peixe frito crocante, servido com salada.</p>
+                    <span class="price">R$ 70,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="ceviche.jpg" alt="Ceviche de Peixe">
+                    <h3>Ceviche de Peixe</h3>
+                    <p>Ceviche de peixe branco com limão e cebola roxa.</p>
+                    <span class="price">R$ 65,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="risoto-camarao.jpg" alt="Risoto de Camarão">
+                    <h3>Risoto de Camarão</h3>
+                    <p>Risoto cremoso com camarões frescos.</p>
+                    <span class="price">R$ 75,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="atum-grelhado.jpg" alt="Atum Grelhado">
+                    <h3>Atum Grelhado</h3>
+                    <p>Atum grelhado com molho de gengibre.</p>
+                    <span class="price">R$ 100,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="paella.jpg" alt="Paella de Frutos do Mar">
+                    <h3>Paella de Frutos do Mar</h3>
+                    <p>Paella tradicional com frutos do mar frescos.</p>
+                    <span class="price">R$ 120,00</span>
+                </div>
+            </div>
+            <!-- Massas -->
+            <div class="menu-category massas">
+                <div class="menu-item">
+                    <img src="lasanha.jpg" alt="Lasanha à Bolonhesa">
+                    <h3>Lasanha à Bolonhesa</h3>
+                    <p>Lasanha com molho bolonhesa e queijo derretido.</p>
+                    <span class="price">R$ 55,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="risoto-funghi.jpg" alt="Risoto de Funghi">
+                    <h3>Risoto de Funghi</h3>
+                    <p>Risoto cremoso com cogumelos porcini e parmesão.</p>
+                    <span class="price">R$ 65,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="espaguete.jpg" alt="Espaguete ao Molho Pesto">
+                    <h3>Espaguete ao Molho Pesto</h3>
+                    <p>Espaguete com molho pesto de manjericão.</p>
+                    <span class="price">R$ 50,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="ravioli.jpg" alt="Ravioli de Queijo">
+                    <h3>Ravioli de Queijo</h3>
+                    <p>Ravioli recheado com queijo, ao molho de tomate.</p>
+                    <span class="price">R$ 60,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="penne.jpg" alt="Penne ao Molho Branco">
+                    <h3>Penne ao Molho Branco</h3>
+                    <p>Penne com molho branco e cogumelos.</p>
+                    <span class="price">R$ 55,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="nhoque.jpg" alt="Nhoque ao Sugo">
+                    <h3>Nhoque ao Sugo</h3>
+                    <p>Nhoque de batata com molho de tomate fresco.</p>
+                    <span class="price">R$ 45,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="canelone.jpg" alt="Canelone de Frango">
+                    <h3>Canelone de Frango</h3>
+                    <p>Canelone recheado com frango e molho branco.</p>
+                    <span class="price">R$ 58,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="talharim.jpg" alt="Talharim ao Molho de Camarão">
+                    <h3>Talharim ao Molho de Camarão</h3>
+                    <p>Talharim com camarões ao molho de tomate.</p>
+                    <span class="price">R$ 75,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="fettuccine.jpg" alt="Fettuccine Alfredo">
+                    <h3>Fettuccine Alfredo</h3>
+                    <p>Fettuccine com molho cremoso de queijo parmesão.</p>
+                    <span class="price">R$ 62,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="macarrao.jpg" alt="Macarrão ao Molho de Queijo">
+                    <h3>Macarrão ao Molho de Queijo</h3>
+                    <p>Macarrão com molho cremoso de queijo cheddar.</p>
+                    <span class="price">R$ 48,00</span>
+                </div>
+            </div>
+            <!-- Sobremesas -->
+            <div class="menu-category sobremesas">
+                <div class="menu-item">
+                    <img src="bolo-chocolate.jpg" alt="Bolo de Chocolate">
+                    <h3>Bolo de Chocolate</h3>
+                    <p>Bolo úmido com cobertura de chocolate 70% cacau.</p>
+                    <span class="price">R$ 28,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="sorvete.jpg" alt="Sorvete de Baunilha">
+                    <h3>Sorvete de Baunilha</h3>
+                    <p>Sorvete artesanal de baunilha com calda de caramelo.</p>
+                    <span class="price">R$ 22,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="mousse.jpg" alt="Mousse de Maracujá">
+                    <h3>Mousse de Maracujá</h3>
+                    <p>Mousse leve e refrescante de maracujá.</p>
+                    <span class="price">R$ 18,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="pudim.jpg" alt="Pudim de Leite">
+                    <h3>Pudim de Leite</h3>
+                    <p>Pudim cremoso de leite condensado.</p>
+                    <span class="price">R$ 20,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="cheesecake.jpg" alt="Cheesecake de Morango">
+                    <h3>Cheesecake de Morango</h3>
+                    <p>Cheesecake com calda de morango.</p>
+                    <span class="price">R$ 25,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="tiramisu.jpg" alt="Tiramisu">
+                    <h3>Tiramisu</h3>
+                    <p>Sobremesa italiana com café e mascarpone.</p>
+                    <span class="price">R$ 30,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="brigadeiro.jpg" alt="Brigadeiro Gourmet">
+                    <h3>Brigadeiro Gourmet</h3>
+                    <p>Brigadeiro cremoso com chocolate belga.</p>
+                    <span class="price">R$ 15,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="torta-limao.jpg" alt="Torta de Limão">
+                    <h3>Torta de Limão</h3>
+                    <p>Torta de limão com merengue.</p>
+                    <span class="price">R$ 22,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="creme-brulee.jpg" alt="Crème Brûlée">
+                    <h3>Crème Brûlée</h3>
+                    <p>Sobremesa clássica francesa com caramelo crocante.</p>
+                    <span class="price">R$ 28,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="panqueca.jpg" alt="Panqueca de Doce de Leite">
+                    <h3>Panqueca de Doce de Leite</h3>
+                    <p>Panqueca recheada com doce de leite.</p>
+                    <span class="price">R$ 18,00</span>
+                </div>
+            </div>
+            <!-- Bebidas -->
+            <div class="menu-category bebidas">
+                <div class="menu-item">
+                    <img src="cerveja.jpg" alt="Cerveja Artesanal">
+                    <h3>Cerveja Artesanal</h3>
+                    <p>Cerveja IPA com notas cítricas e amargas.</p>
+                    <span class="price">R$ 18,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="caipira.jpg" alt="Caipirinha de Limão">
+                    <h3>Caipirinha de Limão</h3>
+                    <p>Caipirinha tradicional com limão, açúcar e gelo.</p>
+                    <span class="price">R$ 25,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="vinho.jpg" alt="Vinho Tinto">
+                    <h3>Vinho Tinto</h3>
+                    <p>Vinho tinto seco da casa.</p>
+                    <span class="price">R$ 40,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="suco.jpg" alt="Suco Natural">
+                    <h3>Suco Natural</h3>
+                    <p>Suco de frutas frescas (laranja, abacaxi ou morango).</p>
+                    <span class="price">R$ 12,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="refrigerante.jpg" alt="Refrigerante">
+                    <h3>Refrigerante</h3>
+                    <p>Refrigerante em lata (Coca-Cola, Guaraná, etc.).</p>
+                    <span class="price">R$ 8,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="agua.jpg" alt="Água Mineral">
+                    <h3>Água Mineral</h3>
+                    <p>Água mineral com ou sem gás.</p>
+                    <span class="price">R$ 5,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="cha.jpg" alt="Chá Gelado">
+                    <h3>Chá Gelado</h3>
+                    <p>Chá gelado de pêssego ou limão.</p>
+                    <span class="price">R$ 10,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="cafe.jpg" alt="Café Expresso">
+                    <h3>Café Expresso</h3>
+                    <p>Café expresso tradicional.</p>
+                    <span class="price">R$ 7,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="milkshake.jpg" alt="Milkshake">
+                    <h3>Milkshake</h3>
+                    <p>Milkshake de chocolate, morango ou baunilha.</p>
+                    <span class="price">R$ 20,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="drink.jpg" alt="Drink Especial">
+                    <h3>Drink Especial</h3>
+                    <p>Drink da casa com frutas e licor.</p>
+                    <span class="price">R$ 35,00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Seção Sobre Nós Modificada -->
+    <section id="sobre" class="about">
+        <div class="about-content">
+            <h2 class="animated-title">Sobre Nós</h2>
+            <p class="slogan">Mais que um restaurante, uma experiência familiar</p>
+            <div class="about-text">
+                <p>No Coração de Mãe, cada prato é preparado com carinho e dedicação, trazendo o sabor caseiro que só uma mãe sabe fazer. Desde 1995, mantemos a tradição de receitas familiares com ingredientes selecionados.</p>
+                <p>Venha viver a experiência de um jantar que parece feito pela sua própria mãe, com todo carinho e atenção que você merece!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova Seção da Logo -->
+    <section class="logo-section">
+        <div class="logo-container">
+            <img src="logo2.png" alt="Nosso símbolo" class="logo-animado">
+        </div>
+    </section>
+
+    <!-- Seção de Contato Original -->
+    <section id="contato" class="contact">
+        <h2>Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu Email" required>
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Nova Seção do Mapa -->
+    <section id="mapa" class="map-section">
+        <h2>Onde Estamos</h2>
+        <div class="map-container">
+            <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658502213!3d-23.565734367638155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621559476144!5m2!1spt-BR!2sbr"
+  width="100%" 
+  height="400" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+        </div>
+    </section>
+
+    <!-- Rodapé Original -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Endereço</h3>
+                <p>Av. Paulista, 2295 - Bela Vista, São Paulo - SP, 01311-300</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sábado: 12h às 23h</p>
+                <p>Domingo: 12h às 18h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 Coração de Mãe. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
