@@ -383,16 +383,66 @@
         </div>
     </section>
 
-    <!-- Seção de Contato Original -->
-    <section id="contato" class="contact">
-        <h2>Contato</h2>
-        <form>
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu Email" required>
-            <textarea placeholder="Sua Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+    <!-- Seção de Carrinho -->
+<section id="carrinho">
+    <h2>Carrinho de Compras</h2>
+    <div id="carrinho-container">
+        <ul id="itens-carrinho"></ul>
+        <p id="total">Total: R$ 0.00</p>
+        <button id="finalizar-compra">Finalizar Compra</button>
+    </div>
+</section>
+
+<!-- Seção de Cadastro de Cliente -->
+<section id="cadastro-cliente">
+    <h2>Cadastro de Cliente</h2>
+    <form id="form-cadastro">
+        <input type="text" placeholder="Nome Completo" id="nome" required>
+        <input type="email" placeholder="E-mail" id="email" required>
+        <input type="text" placeholder="Telefone" id="telefone" required>
+        <input type="text" placeholder="Endereço" id="endereco" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+</section>
+
+<!-- Sistema de Pagamento -->
+<section id="pagamento">
+    <h2>Pagamento</h2>
+    <form id="form-pagamento">
+        <label for="forma-pagamento">Forma de Pagamento:</label>
+        <select id="forma-pagamento" name="forma-pagamento" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="debito">Cartão de Débito</option>
+            <option value="credito">Cartão de Crédito</option>
+            <option value="vr">Vale Refeição (VR)</option>
+            <option value="va">Vale Alimentação (VA)</option>
+        </select>
+
+        <!-- Campos para Cartão de Crédito/Débito -->
+        <div id="campos-cartao" class="campos-pagamento">
+            <label for="numero-cartao">Número do Cartão:</label>
+            <input type="text" id="numero-cartao" name="numero-cartao" placeholder="0000 0000 0000 0000">
+
+            <label for="nome-cartao">Nome no Cartão:</label>
+            <input type="text" id="nome-cartao" name="nome-cartao" placeholder="Nome Completo">
+
+            <label for="validade-cartao">Validade:</label>
+            <input type="text" id="validade-cartao" name="validade-cartao" placeholder="MM/AA">
+
+            <label for="cvv-cartao">CVV:</label>
+            <input type="text" id="cvv-cartao" name="cvv-cartao" placeholder="123">
+        </div>
+
+        <!-- Campos para VR/VA -->
+        <div id="campos-vr-va" class="campos-pagamento">
+            <label for="codigo-vr-va">Código do Vale:</label>
+            <input type="text" id="codigo-vr-va" name="codigo-vr-va" placeholder="Código do Vale">
+        </div>
+
+        <button type="submit">Finalizar Pagamento</button>
+    </form>
+</section>
+
 
     <!-- Nova Seção do Mapa -->
     <section id="mapa" class="map-section">
