@@ -1,488 +1,2842 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coração de Mãe</title>
+
+    <meta name="description" content="Coração de Mãe — gastronomia afetiva, sabor caseiro e experiências especiais.">
+    <meta name="theme-color" content="#10100f">
+
+    <title>Coração de Mãe | Gastronomia Afetiva</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Ícones -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="logo.png" alt="Logotipo Coração de Mãe">
-                <h1>Coração de Mãe</h1>
+
+    <!-- =====================================================
+         LOADING
+    ====================================================== -->
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">
+            <img src="logo.png" alt="Coração de Mãe">
+        </div>
+
+        <div class="loader-line"></div>
+
+        <span>Preparando sua experiência...</span>
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <nav class="navbar">
+
+            <a href="#home" class="brand">
+
+                <div class="brand-logo">
+                    <img src="logo.png" alt="Logo Coração de Mãe">
+                </div>
+
+                <div class="brand-info">
+                    <strong>Coração de Mãe</strong>
+                    <span>Gastronomia afetiva</span>
+                </div>
+
+            </a>
+
+
+            <div class="nav-menu" id="navMenu">
+
+                <a href="#home" class="nav-link active">
+                    <span>01</span>
+                    Início
+                </a>
+
+                <a href="#cardapio" class="nav-link">
+                    <span>02</span>
+                    Cardápio
+                </a>
+
+                <a href="#sobre" class="nav-link">
+                    <span>03</span>
+                    Nossa história
+                </a>
+
+                <a href="#contato" class="nav-link">
+                    <span>04</span>
+                    Contato
+                </a>
+
             </div>
-            <button class="menu-toggle" aria-label="Abrir menu">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+
+
+            <div class="nav-actions">
+
+                <button
+                    class="cart-trigger"
+                    id="cartTrigger"
+                    aria-label="Abrir carrinho"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span>Pedido</span>
+
+                    <b id="cartCount">0</b>
+                </button>
+
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
         </nav>
+
     </header>
 
-    <!-- No HTML, dentro da seção hero -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h2 class="hero-title">Descubra o Sabor que Vem do <span>Coração</span></h2>
-        <p class="hero-subtitle">Experiências gastronômicas que remetem ao aconchego do lar</p>
-        <a href="#cardapio" class="btn">Ver Cardápio Completo</a>
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-background"></div>
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow reveal">
+                    <span></span>
+                    Desde 1995
+                    <span></span>
+                </div>
+
+
+                <h1 class="hero-title reveal">
+
+                    O sabor que
+                    <em>abraça</em>
+
+                    você.
+
+                </h1>
+
+
+                <p class="hero-description reveal">
+
+                    Receitas feitas com alma, ingredientes selecionados
+                    e aquele sabor que lembra a comida de casa.
+
+                </p>
+
+
+                <div class="hero-actions reveal">
+
+                    <a href="#cardapio" class="btn btn-primary">
+                        <span>Explorar cardápio</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#sobre" class="btn btn-ghost">
+                        Nossa história
+                    </a>
+
+                </div>
+
+
+                <div class="hero-info reveal">
+
+                    <div class="hero-info-item">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <div>
+                            <strong>Experiência</strong>
+                            <span>Desde 1995</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-info-divider"></div>
+
+
+                    <div class="hero-info-item">
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                        <div>
+                            <strong>Feito com carinho</strong>
+                            <span>Todos os dias</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-info-divider"></div>
+
+
+                    <div class="hero-info-item">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        <div>
+                            <strong>Gastronomia</strong>
+                            <span>Afetiva</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-scroll">
+
+                <span>Role para descobrir</span>
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MARQUEE
+        ====================================================== -->
+
+        <div class="marquee">
+
+            <div class="marquee-track">
+
+                <span>COMIDA DE VERDADE</span>
+                <i class="fa-solid fa-star"></i>
+
+                <span>SABOR DE CASA</span>
+                <i class="fa-solid fa-star"></i>
+
+                <span>FEITO COM AMOR</span>
+                <i class="fa-solid fa-star"></i>
+
+                <span>DESDE 1995</span>
+                <i class="fa-solid fa-star"></i>
+
+                <span>COMIDA DE VERDADE</span>
+                <i class="fa-solid fa-star"></i>
+
+                <span>SABOR DE CASA</span>
+                <i class="fa-solid fa-star"></i>
+
+                <span>FEITO COM AMOR</span>
+                <i class="fa-solid fa-star"></i>
+
+                <span>DESDE 1995</span>
+                <i class="fa-solid fa-star"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CARDÁPIO
+        ====================================================== -->
+
+        <section class="menu-section section" id="cardapio">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            Nosso cardápio
+                        </span>
+
+                        <h2>
+                            Feito para
+                            <em>você.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+                        Da cozinha da nossa família para a sua mesa.
+                        Escolha seu favorito e faça seu pedido.
+                    </p>
+
+                </div>
+
+
+
+                <!-- FILTROS -->
+
+                <div class="category-navigation">
+
+                    <button
+                        class="category-btn active"
+                        data-category="carnes"
+                    >
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                        Carnes
+                    </button>
+
+
+                    <button
+                        class="category-btn"
+                        data-category="frutos-do-mar"
+                    >
+                        <i class="fa-solid fa-fish"></i>
+                        Frutos do mar
+                    </button>
+
+
+                    <button
+                        class="category-btn"
+                        data-category="massas"
+                    >
+                        <i class="fa-solid fa-bowl-food"></i>
+                        Massas
+                    </button>
+
+
+                    <button
+                        class="category-btn"
+                        data-category="sobremesas"
+                    >
+                        <i class="fa-solid fa-cake-candles"></i>
+                        Sobremesas
+                    </button>
+
+
+                    <button
+                        class="category-btn"
+                        data-category="bebidas"
+                    >
+                        <i class="fa-solid fa-martini-glass"></i>
+                        Bebidas
+                    </button>
+
+                </div>
+
+
+
+                <!-- CARDÁPIO -->
+
+                <div class="menu-grid">
+
+
+                    <!-- =================================================
+                         CARNES
+                    ================================================== -->
+
+                    <div class="menu-category active" data-category="carnes">
+
+
+                        <article
+                            class="food-card featured"
+                            data-name="Filé Mignon"
+                            data-price="120"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="file-mignon.jpg"
+                                    alt="Filé Mignon"
+                                    loading="lazy"
+                                >
+
+                                <span class="food-badge">
+                                    <i class="fa-solid fa-star"></i>
+                                    Favorito
+                                </span>
+
+                                <button
+                                    class="quick-add"
+                                    aria-label="Adicionar Filé Mignon ao carrinho"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Filé Mignon</h3>
+
+                                    <span class="food-price">
+                                        R$ 120,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Filé mignon grelhado no ponto perfeito,
+                                    servido com molho de vinho tinto.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article
+                            class="food-card"
+                            data-name="Picanha Grelhada"
+                            data-price="110"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="picanha.jpg"
+                                    alt="Picanha Grelhada"
+                                    loading="lazy"
+                                >
+
+                                <button
+                                    class="quick-add"
+                                    aria-label="Adicionar Picanha ao carrinho"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Picanha Grelhada</h3>
+
+                                    <span class="food-price">
+                                        R$ 110,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Picanha suculenta preparada na chapa
+                                    para preservar todo o seu sabor.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article
+                            class="food-card"
+                            data-name="Costela Assada"
+                            data-price="95"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="costela.jpg"
+                                    alt="Costela Assada"
+                                    loading="lazy"
+                                >
+
+                                <button class="quick-add">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Costela Assada</h3>
+
+                                    <span class="food-price">
+                                        R$ 95,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Costela bovina assada lentamente,
+                                    acompanhada de batatas douradas.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article
+                            class="food-card"
+                            data-name="Frango Grelhado"
+                            data-price="50"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="frango-grelhado.jpg"
+                                    alt="Frango Grelhado"
+                                    loading="lazy"
+                                >
+
+                                <button class="quick-add">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Frango Grelhado</h3>
+
+                                    <span class="food-price">
+                                        R$ 50,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Peito de frango grelhado com
+                                    ervas finas e temperos da casa.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article
+                            class="food-card"
+                            data-name="Strogonoff de Carne"
+                            data-price="65"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="strogonoff.jpg"
+                                    alt="Strogonoff de Carne"
+                                    loading="lazy"
+                                >
+
+                                <button class="quick-add">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Strogonoff de Carne</h3>
+
+                                    <span class="food-price">
+                                        R$ 65,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Strogonoff cremoso servido com
+                                    arroz branco e batata palha.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article
+                            class="food-card"
+                            data-name="Hambúrguer Artesanal"
+                            data-price="42"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="hamburguer.jpg"
+                                    alt="Hambúrguer Artesanal"
+                                    loading="lazy"
+                                >
+
+                                <button class="quick-add">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Hambúrguer Artesanal</h3>
+
+                                    <span class="food-price">
+                                        R$ 42,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Hambúrguer Angus, cheddar cremoso
+                                    e bacon crocante.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article
+                            class="food-card"
+                            data-name="Carne de Sol"
+                            data-price="75"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="carne-de-sol.jpg"
+                                    alt="Carne de Sol"
+                                    loading="lazy"
+                                >
+
+                                <button class="quick-add">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Carne de Sol</h3>
+
+                                    <span class="food-price">
+                                        R$ 75,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Carne de sol acebolada,
+                                    servida com mandioca.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article
+                            class="food-card"
+                            data-name="Espeto de Carne"
+                            data-price="60"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="espeto-carne.jpg"
+                                    alt="Espeto de Carne"
+                                    loading="lazy"
+                                >
+
+                                <button class="quick-add">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Espeto de Carne</h3>
+
+                                    <span class="food-price">
+                                        R$ 60,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Espeto de carne bovina com
+                                    legumes grelhados.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article
+                            class="food-card"
+                            data-name="Bife Acebolado"
+                            data-price="55"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="bife-acebolado.jpg"
+                                    alt="Bife Acebolado"
+                                    loading="lazy"
+                                >
+
+                                <button class="quick-add">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Bife Acebolado</h3>
+
+                                    <span class="food-price">
+                                        R$ 55,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Bife acebolado servido com
+                                    arroz e feijão.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article
+                            class="food-card"
+                            data-name="Carne Assada"
+                            data-price="85"
+                        >
+
+                            <div class="food-image">
+
+                                <img
+                                    src="carne-assada.jpg"
+                                    alt="Carne Assada"
+                                    loading="lazy"
+                                >
+
+                                <button class="quick-add">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="food-content">
+
+                                <div class="food-top">
+
+                                    <h3>Carne Assada</h3>
+
+                                    <span class="food-price">
+                                        R$ 85,00
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Carne assada lentamente,
+                                    acompanhada de purê de batata.
+                                </p>
+
+
+                                <button class="add-food">
+
+                                    <span>Adicionar ao pedido</span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         FRUTOS DO MAR
+                    ================================================== -->
+
+                    <div class="menu-category" data-category="frutos-do-mar">
+
+                        <article class="food-card" data-name="Camarão ao Alho e Óleo" data-price="85">
+                            <div class="food-image">
+                                <img src="camarao-alho-oleo.jpg" alt="Camarão ao Alho e Óleo" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Camarão ao Alho e Óleo</h3>
+                                    <span class="food-price">R$ 85,00</span>
+                                </div>
+
+                                <p>Camarões frescos refogados no alho e azeite extra virgem.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Moqueca de Peixe" data-price="95">
+                            <div class="food-image">
+                                <img src="moqueca-peixe.jpg" alt="Moqueca de Peixe" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Moqueca de Peixe</h3>
+                                    <span class="food-price">R$ 95,00</span>
+                                </div>
+
+                                <p>Peixe fresco cozido no leite de coco e azeite de dendê.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Sushi Variado" data-price="80">
+                            <div class="food-image">
+                                <img src="sushi.jpg" alt="Sushi Variado" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Sushi Variado</h3>
+                                    <span class="food-price">R$ 80,00</span>
+                                </div>
+
+                                <p>Combinação de sushis e sashimis frescos.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Polvo Grelhado" data-price="90">
+                            <div class="food-image">
+                                <img src="polvo-grelhado.jpg" alt="Polvo Grelhado" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Polvo Grelhado</h3>
+                                    <span class="food-price">R$ 90,00</span>
+                                </div>
+
+                                <p>Polvo grelhado com azeite e ervas finas.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Lagosta Grelhada" data-price="150">
+                            <div class="food-image">
+                                <img src="lagosta.jpg" alt="Lagosta Grelhada" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Lagosta Grelhada</h3>
+                                    <span class="food-price">R$ 150,00</span>
+                                </div>
+
+                                <p>Lagosta grelhada com manteiga de ervas.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Peixe Frito" data-price="70">
+                            <div class="food-image">
+                                <img src="peixe-frito.jpg" alt="Peixe Frito" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Peixe Frito</h3>
+                                    <span class="food-price">R$ 70,00</span>
+                                </div>
+
+                                <p>Peixe frito crocante, servido com salada.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Ceviche de Peixe" data-price="65">
+                            <div class="food-image">
+                                <img src="ceviche.jpg" alt="Ceviche de Peixe" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Ceviche de Peixe</h3>
+                                    <span class="food-price">R$ 65,00</span>
+                                </div>
+
+                                <p>Ceviche de peixe branco com limão e cebola roxa.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Risoto de Camarão" data-price="75">
+                            <div class="food-image">
+                                <img src="risoto-camarao.jpg" alt="Risoto de Camarão" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Risoto de Camarão</h3>
+                                    <span class="food-price">R$ 75,00</span>
+                                </div>
+
+                                <p>Risoto cremoso preparado com camarões frescos.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Atum Grelhado" data-price="100">
+                            <div class="food-image">
+                                <img src="atum-grelhado.jpg" alt="Atum Grelhado" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Atum Grelhado</h3>
+                                    <span class="food-price">R$ 100,00</span>
+                                </div>
+
+                                <p>Atum grelhado acompanhado de molho de gengibre.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Paella de Frutos do Mar" data-price="120">
+                            <div class="food-image">
+                                <img src="paella.jpg" alt="Paella de Frutos do Mar" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Paella de Frutos do Mar</h3>
+                                    <span class="food-price">R$ 120,00</span>
+                                </div>
+
+                                <p>Paella tradicional preparada com frutos do mar frescos.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         MASSAS
+                    ================================================== -->
+
+                    <div class="menu-category" data-category="massas">
+
+                        <article class="food-card" data-name="Lasanha à Bolonhesa" data-price="55">
+                            <div class="food-image">
+                                <img src="lasanha.jpg" alt="Lasanha à Bolonhesa" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Lasanha à Bolonhesa</h3>
+                                    <span class="food-price">R$ 55,00</span>
+                                </div>
+
+                                <p>Lasanha artesanal com molho bolonhesa e queijo derretido.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Risoto de Funghi" data-price="65">
+                            <div class="food-image">
+                                <img src="risoto-funghi.jpg" alt="Risoto de Funghi" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Risoto de Funghi</h3>
+                                    <span class="food-price">R$ 65,00</span>
+                                </div>
+
+                                <p>Risoto cremoso com cogumelos porcini e parmesão.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Espaguete ao Molho Pesto" data-price="50">
+                            <div class="food-image">
+                                <img src="espaguete.jpg" alt="Espaguete ao Molho Pesto" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Espaguete ao Molho Pesto</h3>
+                                    <span class="food-price">R$ 50,00</span>
+                                </div>
+
+                                <p>Espaguete artesanal com pesto fresco de manjericão.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Ravioli de Queijo" data-price="60">
+                            <div class="food-image">
+                                <img src="ravioli.jpg" alt="Ravioli de Queijo" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Ravioli de Queijo</h3>
+                                    <span class="food-price">R$ 60,00</span>
+                                </div>
+
+                                <p>Ravioli recheado com queijo e servido ao molho de tomate.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Penne ao Molho Branco" data-price="55">
+                            <div class="food-image">
+                                <img src="penne.jpg" alt="Penne ao Molho Branco" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Penne ao Molho Branco</h3>
+                                    <span class="food-price">R$ 55,00</span>
+                                </div>
+
+                                <p>Penne cremoso com molho branco e cogumelos.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Nhoque ao Sugo" data-price="45">
+                            <div class="food-image">
+                                <img src="nhoque.jpg" alt="Nhoque ao Sugo" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Nhoque ao Sugo</h3>
+                                    <span class="food-price">R$ 45,00</span>
+                                </div>
+
+                                <p>Nhoque de batata com molho de tomate fresco.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Canelone de Frango" data-price="58">
+                            <div class="food-image">
+                                <img src="canelone.jpg" alt="Canelone de Frango" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Canelone de Frango</h3>
+                                    <span class="food-price">R$ 58,00</span>
+                                </div>
+
+                                <p>Canelone recheado com frango e molho branco.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Talharim ao Molho de Camarão" data-price="75">
+                            <div class="food-image">
+                                <img src="talharim.jpg" alt="Talharim ao Molho de Camarão" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Talharim com Camarão</h3>
+                                    <span class="food-price">R$ 75,00</span>
+                                </div>
+
+                                <p>Talharim artesanal com camarões ao molho de tomate.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Fettuccine Alfredo" data-price="62">
+                            <div class="food-image">
+                                <img src="fettuccine.jpg" alt="Fettuccine Alfredo" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Fettuccine Alfredo</h3>
+                                    <span class="food-price">R$ 62,00</span>
+                                </div>
+
+                                <p>Fettuccine com molho cremoso de parmesão.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Macarrão ao Molho de Queijo" data-price="48">
+                            <div class="food-image">
+                                <img src="macarrao.jpg" alt="Macarrão ao Molho de Queijo" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Macarrão ao Molho de Queijo</h3>
+                                    <span class="food-price">R$ 48,00</span>
+                                </div>
+
+                                <p>Macarrão cremoso com molho de queijo cheddar.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         SOBREMESAS
+                    ================================================== -->
+
+                    <div class="menu-category" data-category="sobremesas">
+
+                        <article class="food-card" data-name="Bolo de Chocolate" data-price="28">
+                            <div class="food-image">
+                                <img src="bolo-chocolate.jpg" alt="Bolo de Chocolate" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Bolo de Chocolate</h3>
+                                    <span class="food-price">R$ 28,00</span>
+                                </div>
+
+                                <p>Bolo úmido com cobertura de chocolate 70% cacau.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Sorvete de Baunilha" data-price="22">
+                            <div class="food-image">
+                                <img src="sorvete.jpg" alt="Sorvete de Baunilha" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Sorvete de Baunilha</h3>
+                                    <span class="food-price">R$ 22,00</span>
+                                </div>
+
+                                <p>Sorvete artesanal de baunilha com calda de caramelo.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Mousse de Maracujá" data-price="18">
+                            <div class="food-image">
+                                <img src="mousse.jpg" alt="Mousse de Maracujá" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Mousse de Maracujá</h3>
+                                    <span class="food-price">R$ 18,00</span>
+                                </div>
+
+                                <p>Mousse leve, cremoso e refrescante de maracujá.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Pudim de Leite" data-price="20">
+                            <div class="food-image">
+                                <img src="pudim.jpg" alt="Pudim de Leite" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Pudim de Leite</h3>
+                                    <span class="food-price">R$ 20,00</span>
+                                </div>
+
+                                <p>Pudim cremoso de leite condensado com calda artesanal.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Cheesecake de Morango" data-price="25">
+                            <div class="food-image">
+                                <img src="cheesecake.jpg" alt="Cheesecake de Morango" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Cheesecake de Morango</h3>
+                                    <span class="food-price">R$ 25,00</span>
+                                </div>
+
+                                <p>Cheesecake cremoso com delicada calda de morango.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Tiramisu" data-price="30">
+                            <div class="food-image">
+                                <img src="tiramisu.jpg" alt="Tiramisu" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Tiramisu</h3>
+                                    <span class="food-price">R$ 30,00</span>
+                                </div>
+
+                                <p>Clássico italiano com café, mascarpone e cacau.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Brigadeiro Gourmet" data-price="15">
+                            <div class="food-image">
+                                <img src="brigadeiro.jpg" alt="Brigadeiro Gourmet" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Brigadeiro Gourmet</h3>
+                                    <span class="food-price">R$ 15,00</span>
+                                </div>
+
+                                <p>Brigadeiro cremoso preparado com chocolate belga.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Torta de Limão" data-price="22">
+                            <div class="food-image">
+                                <img src="torta-limao.jpg" alt="Torta de Limão" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Torta de Limão</h3>
+                                    <span class="food-price">R$ 22,00</span>
+                                </div>
+
+                                <p>Torta delicada de limão com cobertura de merengue.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Crème Brûlée" data-price="28">
+                            <div class="food-image">
+                                <img src="creme-brulee.jpg" alt="Crème Brûlée" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Crème Brûlée</h3>
+                                    <span class="food-price">R$ 28,00</span>
+                                </div>
+
+                                <p>Clássico francês com caramelo crocante.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Panqueca de Doce de Leite" data-price="18">
+                            <div class="food-image">
+                                <img src="panqueca.jpg" alt="Panqueca de Doce de Leite" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Panqueca de Doce de Leite</h3>
+                                    <span class="food-price">R$ 18,00</span>
+                                </div>
+
+                                <p>Panqueca artesanal recheada com doce de leite.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         BEBIDAS
+                    ================================================== -->
+
+                    <div class="menu-category" data-category="bebidas">
+
+                        <article class="food-card" data-name="Cerveja Artesanal" data-price="18">
+                            <div class="food-image">
+                                <img src="cerveja.jpg" alt="Cerveja Artesanal" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Cerveja Artesanal</h3>
+                                    <span class="food-price">R$ 18,00</span>
+                                </div>
+
+                                <p>Cerveja IPA com notas cítricas e amargas.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Caipirinha de Limão" data-price="25">
+                            <div class="food-image">
+                                <img src="caipira.jpg" alt="Caipirinha de Limão" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Caipirinha de Limão</h3>
+                                    <span class="food-price">R$ 25,00</span>
+                                </div>
+
+                                <p>Caipirinha tradicional com limão, açúcar e gelo.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Vinho Tinto" data-price="40">
+                            <div class="food-image">
+                                <img src="vinho.jpg" alt="Vinho Tinto" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Vinho Tinto</h3>
+                                    <span class="food-price">R$ 40,00</span>
+                                </div>
+
+                                <p>Vinho tinto seco selecionado pela casa.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Suco Natural" data-price="12">
+                            <div class="food-image">
+                                <img src="suco.jpg" alt="Suco Natural" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Suco Natural</h3>
+                                    <span class="food-price">R$ 12,00</span>
+                                </div>
+
+                                <p>Frutas frescas: laranja, abacaxi ou morango.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Refrigerante" data-price="8">
+                            <div class="food-image">
+                                <img src="refrigerante.jpg" alt="Refrigerante" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Refrigerante</h3>
+                                    <span class="food-price">R$ 8,00</span>
+                                </div>
+
+                                <p>Coca-Cola, Guaraná e outras opções em lata.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Água Mineral" data-price="5">
+                            <div class="food-image">
+                                <img src="agua.jpg" alt="Água Mineral" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Água Mineral</h3>
+                                    <span class="food-price">R$ 5,00</span>
+                                </div>
+
+                                <p>Água mineral com ou sem gás.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Chá Gelado" data-price="10">
+                            <div class="food-image">
+                                <img src="cha.jpg" alt="Chá Gelado" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Chá Gelado</h3>
+                                    <span class="food-price">R$ 10,00</span>
+                                </div>
+
+                                <p>Chá gelado refrescante de pêssego ou limão.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Café Expresso" data-price="7">
+                            <div class="food-image">
+                                <img src="cafe.jpg" alt="Café Expresso" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Café Expresso</h3>
+                                    <span class="food-price">R$ 7,00</span>
+                                </div>
+
+                                <p>Café expresso tradicional, intenso e aromático.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Milkshake" data-price="20">
+                            <div class="food-image">
+                                <img src="milkshake.jpg" alt="Milkshake" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Milkshake</h3>
+                                    <span class="food-price">R$ 20,00</span>
+                                </div>
+
+                                <p>Chocolate, morango ou baunilha.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+
+                        <article class="food-card" data-name="Drink Especial" data-price="35">
+                            <div class="food-image">
+                                <img src="drink.jpg" alt="Drink Especial" loading="lazy">
+                                <button class="quick-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <div class="food-content">
+                                <div class="food-top">
+                                    <h3>Drink Especial</h3>
+                                    <span class="food-price">R$ 35,00</span>
+                                </div>
+
+                                <p>Drink exclusivo da casa com frutas e licor.</p>
+
+                                <button class="add-food">
+                                    <span>Adicionar ao pedido</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             EXPERIÊNCIA / SOBRE
+        ====================================================== -->
+
+        <section class="story-section section" id="sobre">
+
+            <div class="container story-grid">
+
+                <div class="story-visual">
+
+                    <div class="story-image-main">
+
+                        <img
+                            src="logo2.png"
+                            alt="Coração de Mãe"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="story-floating-card">
+
+                        <span>Desde</span>
+
+                        <strong>1995</strong>
+
+                        <small>
+                            Uma história feita de sabor.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="story-content">
+
+                    <span class="section-label">
+                        Nossa história
+                    </span>
+
+                    <h2>
+                        Mais que um restaurante.
+                        <em>Uma memória.</em>
+                    </h2>
+
+
+                    <p class="story-lead">
+                        Há coisas que não são apenas comidas.
+                        São lembranças.
+                    </p>
+
+
+                    <p>
+                        No Coração de Mãe, acreditamos que uma boa refeição
+                        pode transportar você para aquele lugar especial:
+                        a cozinha de casa, a mesa cheia e o carinho de quem
+                        prepara tudo pensando em você.
+                    </p>
+
+
+                    <p>
+                        Desde 1995, preservamos receitas familiares,
+                        ingredientes selecionados e o cuidado em cada detalhe.
+                        Nossa cozinha mistura tradição, criatividade e,
+                        acima de tudo, afeto.
+                    </p>
+
+
+                    <div class="story-signature">
+
+                        <img
+                            src="logo2.png"
+                            alt=""
+                        >
+
+                        <div>
+                            <strong>Coração de Mãe</strong>
+                            <span>Feito com carinho.</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             DESTAQUE
+        ====================================================== -->
+
+        <section class="experience-banner">
+
+            <div class="experience-background"></div>
+
+            <div class="experience-overlay"></div>
+
+
+            <div class="experience-content">
+
+                <span class="section-label">
+                    Uma experiência diferente
+                </span>
+
+                <h2>
+                    O ingrediente secreto
+                    <em>é o carinho.</em>
+                </h2>
+
+                <p>
+                    Sente-se. Respire. Aproveite.
+                    O resto deixa com a gente.
+                </p>
+
+                <a href="#cardapio" class="btn btn-primary">
+                    Ver o cardápio
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTATO
+        ====================================================== -->
+
+        <section class="contact-section section" id="contato">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            Fale conosco
+                        </span>
+
+                        <h2>
+                            Venha nos
+                            <em>visitar.</em>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Tem alguma dúvida, sugestão ou quer fazer
+                        uma reserva? Estamos esperando por você.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <div class="contact-info">
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <span>Endereço</span>
+
+                                <strong>
+                                    Av. Paulista, 2295
+                                </strong>
+
+                                <p>
+                                    Bela Vista, São Paulo - SP
+                                    <br>
+                                    01311-300
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+
+                            <div>
+                                <span>Horário</span>
+
+                                <strong>
+                                    Segunda a Sábado
+                                </strong>
+
+                                <p>
+                                    12h às 23h
+                                    <br><br>
+                                    Domingo: 12h às 18h
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+
+                            <div>
+                                <span>Telefone</span>
+
+                                <strong>
+                                    (11) 99999-9999
+                                </strong>
+
+                                <p>
+                                    Atendimento durante o horário
+                                    de funcionamento.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="social-links">
+
+                            <a href="#" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="#" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="#" aria-label="WhatsApp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form class="contact-form" id="formContato">
+
+                        <div class="form-row">
+
+                            <div class="form-field">
+
+                                <label for="contactNome">
+                                    Seu nome
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactNome"
+                                    name="nome"
+                                    placeholder="Como podemos chamar você?"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="contactEmail">
+                                    E-mail
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    name="email"
+                                    placeholder="seu@email.com"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="contactAssunto">
+                                Assunto
+                            </label>
+
+                            <select
+                                id="contactAssunto"
+                                name="assunto"
+                                required
+                            >
+                                <option value="" selected disabled>
+                                    Selecione uma opção
+                                </option>
+
+                                <option value="reserva">
+                                    Reserva
+                                </option>
+
+                                <option value="duvida">
+                                    Dúvida
+                                </option>
+
+                                <option value="sugestao">
+                                    Sugestão
+                                </option>
+
+                                <option value="outro">
+                                    Outro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="contactMensagem">
+                                Mensagem
+                            </label>
+
+                            <textarea
+                                id="contactMensagem"
+                                name="mensagem"
+                                rows="5"
+                                placeholder="Escreva sua mensagem..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-submit"
+                        >
+
+                            <span>Enviar mensagem</span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MAPA
+        ====================================================== -->
+
+        <section class="map-section">
+
+            <div class="map-header">
+
+                <span class="section-label">
+                    Onde estamos
+                </span>
+
+                <h2>
+                    Encontre o
+                    <em>Coração.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="map-container">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658502213!3d-23.565734367638155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621559476144!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="500"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localização do Coração de Mãe"
+                ></iframe>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         CARRINHO / SIDEBAR
+    ====================================================== -->
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <div>
+
+                <span class="cart-eyebrow">
+                    Seu pedido
+                </span>
+
+                <h2>
+                    Carrinho
+                </h2>
+
+            </div>
+
+
+            <button
+                class="cart-close"
+                id="cartClose"
+                aria-label="Fechar carrinho"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="cart-body">
+
+            <div
+                class="cart-empty"
+                id="cartEmpty"
+            >
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <h3>
+                    Seu carrinho está vazio
+                </h3>
+
+                <p>
+                    Escolha seus pratos favoritos
+                    e monte seu pedido.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    id="startShopping"
+                >
+                    Ver cardápio
+                </button>
+
+            </div>
+
+
+            <div
+                class="cart-items"
+                id="cartItems"
+            >
+                <!-- Itens inseridos pelo JavaScript -->
+            </div>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total-row">
+
+                <span>Subtotal</span>
+
+                <strong id="cartTotal">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <button
+                class="btn btn-primary checkout-btn"
+                id="checkoutButton"
+            >
+
+                <span>Continuar pedido</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+            <small>
+                Pagamento seguro e atendimento personalizado.
+            </small>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MODAL DE CHECKOUT
+    ====================================================== -->
+
+    <div class="modal-overlay" id="checkoutModal">
+
+        <div class="checkout-modal">
+
+            <button
+                class="modal-close"
+                id="checkoutClose"
+                aria-label="Fechar"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <div class="checkout-header">
+
+                <span class="section-label">
+                    Finalização
+                </span>
+
+                <h2>
+                    Complete seu
+                    <em>pedido.</em>
+                </h2>
+
+                <p>
+                    Preencha seus dados para continuar.
+                </p>
+
+            </div>
+
+
+            <form id="checkoutForm">
+
+
+                <div class="checkout-step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            Seus dados
+                        </h3>
+
+
+                        <div class="form-field">
+
+                            <label for="clienteNome">
+                                Nome completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="clienteNome"
+                                name="nome"
+                                placeholder="Digite seu nome"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-field">
+
+                                <label for="clienteTelefone">
+                                    Telefone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="clienteTelefone"
+                                    name="telefone"
+                                    placeholder="(11) 99999-9999"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="clienteEmail">
+                                    E-mail
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="clienteEmail"
+                                    name="email"
+                                    placeholder="seu@email.com"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="checkout-step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            Entrega
+                        </h3>
+
+
+                        <div class="form-field">
+
+                            <label for="clienteEndereco">
+                                Endereço
+                            </label>
+
+                            <input
+                                type="text"
+                                id="clienteEndereco"
+                                name="endereco"
+                                placeholder="Rua, número, complemento"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-field">
+
+                                <label for="clienteBairro">
+                                    Bairro
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="clienteBairro"
+                                    name="bairro"
+                                    placeholder="Seu bairro"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="clienteCep">
+                                    CEP
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="clienteCep"
+                                    name="cep"
+                                    placeholder="00000-000"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="checkout-step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            Pagamento
+                        </h3>
+
+
+                        <div class="form-field">
+
+                            <label for="formaPagamento">
+                                Forma de pagamento
+                            </label>
+
+                            <select
+                                id="formaPagamento"
+                                name="pagamento"
+                                required
+                            >
+
+                                <option
+                                    value=""
+                                    disabled
+                                    selected
+                                >
+                                    Selecione uma opção
+                                </option>
+
+                                <option value="credito">
+                                    Cartão de crédito
+                                </option>
+
+                                <option value="debito">
+                                    Cartão de débito
+                                </option>
+
+                                <option value="vr">
+                                    Vale Refeição
+                                </option>
+
+                                <option value="va">
+                                    Vale Alimentação
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div
+                            class="payment-fields"
+                            id="paymentCardFields"
+                        >
+
+                            <div class="form-field">
+
+                                <label for="numeroCartao">
+                                    Número do cartão
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="numeroCartao"
+                                    placeholder="0000 0000 0000 0000"
+                                    maxlength="19"
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="nomeCartao">
+                                    Nome no cartão
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nomeCartao"
+                                    placeholder="Nome completo"
+                                >
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-field">
+
+                                    <label for="validadeCartao">
+                                        Validade
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="validadeCartao"
+                                        placeholder="MM/AA"
+                                        maxlength="5"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-field">
+
+                                    <label for="cvvCartao">
+                                        CVV
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="cvvCartao"
+                                        placeholder="123"
+                                        maxlength="4"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="payment-fields"
+                            id="paymentVoucherFields"
+                        >
+
+                            <div class="form-field">
+
+                                <label for="codigoVale">
+                                    Código do vale
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="codigoVale"
+                                    placeholder="Digite o código"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="checkout-summary">
+
+                    <div>
+                        <span>Total do pedido</span>
+
+                        <strong id="checkoutTotal">
+                            R$ 0,00
+                        </strong>
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+
+                        <span>Confirmar pedido</span>
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
     </div>
-</section>
 
-    <section id="cardapio" class="menu">
-        <h2></h2>
-        <div class="menu-tabs">
-            <button class="tab-button active" data-category="carnes">Carnes</button>
-            <button class="tab-button" data-category="frutos-do-mar">Frutos do Mar</button>
-            <button class="tab-button" data-category="massas">Massas</button>
-            <button class="tab-button" data-category="sobremesas">Sobremesas</button>
-            <button class="tab-button" data-category="bebidas">Bebidas</button>
-        </div>
-        <div class="menu-items">
-            <!-- Carnes -->
-            <div class="menu-category carnes active">
-                <div class="menu-item">
-                    <img src="file-mignon.jpg" alt="Filé Mignon">
-                    <h3>Filé Mignon</h3>
-                    <p>Filé mignon grelhado, servido com molho de vinho tinto.</p>
-                    <span class="price">R$ 120,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="picanha.jpg" alt="Picanha Grelhada">
-                    <h3>Picanha Grelhada</h3>
-                    <p>Picanha suculenta grelhada na chapa.</p>
-                    <span class="price">R$ 110,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="costela.jpg" alt="Costela Assada">
-                    <h3>Costela Assada</h3>
-                    <p>Costela bovina assada lentamente, servida com batatas.</p>
-                    <span class="price">R$ 95,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="frango-grelhado.jpg" alt="Frango Grelhado">
-                    <h3>Frango Grelhado</h3>
-                    <p>Peito de frango grelhado com ervas finas.</p>
-                    <span class="price">R$ 50,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="strogonoff.jpg" alt="Strogonoff de Carne">
-                    <h3>Strogonoff de Carne</h3>
-                    <p>Strogonoff de carne com arroz e batata palha.</p>
-                    <span class="price">R$ 65,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="hamburguer.jpg" alt="Hambúrguer Artesanal">
-                    <h3>Hambúrguer Artesanal</h3>
-                    <p>Hambúrguer de carne Angus com queijo cheddar e bacon.</p>
-                    <span class="price">R$ 42,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="carne-de-sol.jpg" alt="Carne de Sol">
-                    <h3>Carne de Sol</h3>
-                    <p>Carne de sol acebolada, servida com mandioca.</p>
-                    <span class="price">R$ 75,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="espeto-carne.jpg" alt="Espeto de Carne">
-                    <h3>Espeto de Carne</h3>
-                    <p>Espeto de carne bovina com legumes grelhados.</p>
-                    <span class="price">R$ 60,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="bife-acebolado.jpg" alt="Bife Acebolado">
-                    <h3>Bife Acebolado</h3>
-                    <p>Bife acebolado com arroz e feijão.</p>
-                    <span class="price">R$ 55,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="carne-assada.jpg" alt="Carne Assada">
-                    <h3>Carne Assada</h3>
-                    <p>Carne assada lentamente, servida com purê de batata.</p>
-                    <span class="price">R$ 85,00</span>
-                </div>
-            </div>
-            <!-- Frutos do Mar -->
-            <div class="menu-category frutos-do-mar">
-                <div class="menu-item">
-                    <img src="camarao-alho-oleo.jpg" alt="Camarão ao Alho e Óleo">
-                    <h3>Camarão ao Alho e Óleo</h3>
-                    <p>Camarões frescos refogados no alho e azeite extra virgem.</p>
-                    <span class="price">R$ 85,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="moqueca-peixe.jpg" alt="Moqueca de Peixe">
-                    <h3>Moqueca de Peixe</h3>
-                    <p>Peixe fresco cozido no leite de coco e azeite de dendê.</p>
-                    <span class="price">R$ 95,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="sushi.jpg" alt="Sushi Variado">
-                    <h3>Sushi Variado</h3>
-                    <p>Combinação de sushis e sashimis frescos.</p>
-                    <span class="price">R$ 80,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="polvo-grelhado.jpg" alt="Polvo Grelhado">
-                    <h3>Polvo Grelhado</h3>
-                    <p>Polvo grelhado com azeite e ervas finas.</p>
-                    <span class="price">R$ 90,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="lagosta.jpg" alt="Lagosta Grelhada">
-                    <h3>Lagosta Grelhada</h3>
-                    <p>Lagosta grelhada com manteiga de ervas.</p>
-                    <span class="price">R$ 150,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="peixe-frito.jpg" alt="Peixe Frito">
-                    <h3>Peixe Frito</h3>
-                    <p>Peixe frito crocante, servido com salada.</p>
-                    <span class="price">R$ 70,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="ceviche.jpg" alt="Ceviche de Peixe">
-                    <h3>Ceviche de Peixe</h3>
-                    <p>Ceviche de peixe branco com limão e cebola roxa.</p>
-                    <span class="price">R$ 65,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="risoto-camarao.jpg" alt="Risoto de Camarão">
-                    <h3>Risoto de Camarão</h3>
-                    <p>Risoto cremoso com camarões frescos.</p>
-                    <span class="price">R$ 75,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="atum-grelhado.jpg" alt="Atum Grelhado">
-                    <h3>Atum Grelhado</h3>
-                    <p>Atum grelhado com molho de gengibre.</p>
-                    <span class="price">R$ 100,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="paella.jpg" alt="Paella de Frutos do Mar">
-                    <h3>Paella de Frutos do Mar</h3>
-                    <p>Paella tradicional com frutos do mar frescos.</p>
-                    <span class="price">R$ 120,00</span>
-                </div>
-            </div>
-            <!-- Massas -->
-            <div class="menu-category massas">
-                <div class="menu-item">
-                    <img src="lasanha.jpg" alt="Lasanha à Bolonhesa">
-                    <h3>Lasanha à Bolonhesa</h3>
-                    <p>Lasanha com molho bolonhesa e queijo derretido.</p>
-                    <span class="price">R$ 55,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="risoto-funghi.jpg" alt="Risoto de Funghi">
-                    <h3>Risoto de Funghi</h3>
-                    <p>Risoto cremoso com cogumelos porcini e parmesão.</p>
-                    <span class="price">R$ 65,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="espaguete.jpg" alt="Espaguete ao Molho Pesto">
-                    <h3>Espaguete ao Molho Pesto</h3>
-                    <p>Espaguete com molho pesto de manjericão.</p>
-                    <span class="price">R$ 50,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="ravioli.jpg" alt="Ravioli de Queijo">
-                    <h3>Ravioli de Queijo</h3>
-                    <p>Ravioli recheado com queijo, ao molho de tomate.</p>
-                    <span class="price">R$ 60,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="penne.jpg" alt="Penne ao Molho Branco">
-                    <h3>Penne ao Molho Branco</h3>
-                    <p>Penne com molho branco e cogumelos.</p>
-                    <span class="price">R$ 55,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="nhoque.jpg" alt="Nhoque ao Sugo">
-                    <h3>Nhoque ao Sugo</h3>
-                    <p>Nhoque de batata com molho de tomate fresco.</p>
-                    <span class="price">R$ 45,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="canelone.jpg" alt="Canelone de Frango">
-                    <h3>Canelone de Frango</h3>
-                    <p>Canelone recheado com frango e molho branco.</p>
-                    <span class="price">R$ 58,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="talharim.jpg" alt="Talharim ao Molho de Camarão">
-                    <h3>Talharim ao Molho de Camarão</h3>
-                    <p>Talharim com camarões ao molho de tomate.</p>
-                    <span class="price">R$ 75,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="fettuccine.jpg" alt="Fettuccine Alfredo">
-                    <h3>Fettuccine Alfredo</h3>
-                    <p>Fettuccine com molho cremoso de queijo parmesão.</p>
-                    <span class="price">R$ 62,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="macarrao.jpg" alt="Macarrão ao Molho de Queijo">
-                    <h3>Macarrão ao Molho de Queijo</h3>
-                    <p>Macarrão com molho cremoso de queijo cheddar.</p>
-                    <span class="price">R$ 48,00</span>
-                </div>
-            </div>
-            <!-- Sobremesas -->
-            <div class="menu-category sobremesas">
-                <div class="menu-item">
-                    <img src="bolo-chocolate.jpg" alt="Bolo de Chocolate">
-                    <h3>Bolo de Chocolate</h3>
-                    <p>Bolo úmido com cobertura de chocolate 70% cacau.</p>
-                    <span class="price">R$ 28,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="sorvete.jpg" alt="Sorvete de Baunilha">
-                    <h3>Sorvete de Baunilha</h3>
-                    <p>Sorvete artesanal de baunilha com calda de caramelo.</p>
-                    <span class="price">R$ 22,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="mousse.jpg" alt="Mousse de Maracujá">
-                    <h3>Mousse de Maracujá</h3>
-                    <p>Mousse leve e refrescante de maracujá.</p>
-                    <span class="price">R$ 18,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="pudim.jpg" alt="Pudim de Leite">
-                    <h3>Pudim de Leite</h3>
-                    <p>Pudim cremoso de leite condensado.</p>
-                    <span class="price">R$ 20,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="cheesecake.jpg" alt="Cheesecake de Morango">
-                    <h3>Cheesecake de Morango</h3>
-                    <p>Cheesecake com calda de morango.</p>
-                    <span class="price">R$ 25,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="tiramisu.jpg" alt="Tiramisu">
-                    <h3>Tiramisu</h3>
-                    <p>Sobremesa italiana com café e mascarpone.</p>
-                    <span class="price">R$ 30,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="brigadeiro.jpg" alt="Brigadeiro Gourmet">
-                    <h3>Brigadeiro Gourmet</h3>
-                    <p>Brigadeiro cremoso com chocolate belga.</p>
-                    <span class="price">R$ 15,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="torta-limao.jpg" alt="Torta de Limão">
-                    <h3>Torta de Limão</h3>
-                    <p>Torta de limão com merengue.</p>
-                    <span class="price">R$ 22,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="creme-brulee.jpg" alt="Crème Brûlée">
-                    <h3>Crème Brûlée</h3>
-                    <p>Sobremesa clássica francesa com caramelo crocante.</p>
-                    <span class="price">R$ 28,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="panqueca.jpg" alt="Panqueca de Doce de Leite">
-                    <h3>Panqueca de Doce de Leite</h3>
-                    <p>Panqueca recheada com doce de leite.</p>
-                    <span class="price">R$ 18,00</span>
-                </div>
-            </div>
-            <!-- Bebidas -->
-            <div class="menu-category bebidas">
-                <div class="menu-item">
-                    <img src="cerveja.jpg" alt="Cerveja Artesanal">
-                    <h3>Cerveja Artesanal</h3>
-                    <p>Cerveja IPA com notas cítricas e amargas.</p>
-                    <span class="price">R$ 18,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="caipira.jpg" alt="Caipirinha de Limão">
-                    <h3>Caipirinha de Limão</h3>
-                    <p>Caipirinha tradicional com limão, açúcar e gelo.</p>
-                    <span class="price">R$ 25,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="vinho.jpg" alt="Vinho Tinto">
-                    <h3>Vinho Tinto</h3>
-                    <p>Vinho tinto seco da casa.</p>
-                    <span class="price">R$ 40,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="suco.jpg" alt="Suco Natural">
-                    <h3>Suco Natural</h3>
-                    <p>Suco de frutas frescas (laranja, abacaxi ou morango).</p>
-                    <span class="price">R$ 12,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="refrigerante.jpg" alt="Refrigerante">
-                    <h3>Refrigerante</h3>
-                    <p>Refrigerante em lata (Coca-Cola, Guaraná, etc.).</p>
-                    <span class="price">R$ 8,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="agua.jpg" alt="Água Mineral">
-                    <h3>Água Mineral</h3>
-                    <p>Água mineral com ou sem gás.</p>
-                    <span class="price">R$ 5,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="cha.jpg" alt="Chá Gelado">
-                    <h3>Chá Gelado</h3>
-                    <p>Chá gelado de pêssego ou limão.</p>
-                    <span class="price">R$ 10,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="cafe.jpg" alt="Café Expresso">
-                    <h3>Café Expresso</h3>
-                    <p>Café expresso tradicional.</p>
-                    <span class="price">R$ 7,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="milkshake.jpg" alt="Milkshake">
-                    <h3>Milkshake</h3>
-                    <p>Milkshake de chocolate, morango ou baunilha.</p>
-                    <span class="price">R$ 20,00</span>
-                </div>
-                <div class="menu-item">
-                    <img src="drink.jpg" alt="Drink Especial">
-                    <h3>Drink Especial</h3>
-                    <p>Drink da casa com frutas e licor.</p>
-                    <span class="price">R$ 35,00</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
- <!-- Seção Sobre Nós Modificada -->
-    <section id="sobre" class="about">
-        <div class="about-content">
-            <h2 class="animated-title">Sobre Nós</h2>
-            <p class="slogan">Mais que um restaurante, uma experiência familiar</p>
-            <div class="about-text">
-                <p>No Coração de Mãe, cada prato é preparado com carinho e dedicação, trazendo o sabor caseiro que só uma mãe sabe fazer. Desde 1995, mantemos a tradição de receitas familiares com ingredientes selecionados.</p>
-                <p>Venha viver a experiência de um jantar que parece feito pela sua própria mãe, com todo carinho e atenção que você merece!</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Nova Seção da Logo -->
-    <section class="logo-section">
-        <div class="logo-container">
-            <img src="logo2.png" alt="Nosso símbolo" class="logo-animado">
-        </div>
-    </section>
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
 
-    <!-- Seção de Carrinho -->
-<section id="carrinho">
-    <h2>Carrinho de Compras</h2>
-    <div id="carrinho-container">
-        <ul id="itens-carrinho"></ul>
-        <p id="total">Total: R$ 0.00</p>
-        <button id="finalizar-compra">Finalizar Compra</button>
+    <div class="toast" id="toast">
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div class="toast-content">
+
+            <strong id="toastTitle">
+                Adicionado!
+            </strong>
+
+            <span id="toastMessage">
+                Item adicionado ao seu pedido.
+            </span>
+
+        </div>
+
     </div>
-</section>
-
-<!-- Seção de Cadastro de Cliente -->
-<section id="cadastro-cliente">
-    <h2>Cadastro de Cliente</h2>
-    <form id="form-cadastro">
-        <input type="text" placeholder="Nome Completo" id="nome" required>
-        <input type="email" placeholder="E-mail" id="email" required>
-        <input type="text" placeholder="Telefone" id="telefone" required>
-        <input type="text" placeholder="Endereço" id="endereco" required>
-        <button type="submit">Cadastrar</button>
-    </form>
-</section>
-
-<!-- Sistema de Pagamento -->
-<section id="pagamento">
-    <h2>Pagamento</h2>
-    <form id="form-pagamento">
-        <label for="forma-pagamento">Forma de Pagamento:</label>
-        <select id="forma-pagamento" name="forma-pagamento" required>
-            <option value="" disabled selected>Selecione uma opção</option>
-            <option value="debito">Cartão de Débito</option>
-            <option value="credito">Cartão de Crédito</option>
-            <option value="vr">Vale Refeição (VR)</option>
-            <option value="va">Vale Alimentação (VA)</option>
-        </select>
-
-        <!-- Campos para Cartão de Crédito/Débito -->
-        <div id="campos-cartao" class="campos-pagamento">
-            <label for="numero-cartao">Número do Cartão:</label>
-            <input type="text" id="numero-cartao" name="numero-cartao" placeholder="0000 0000 0000 0000">
-
-            <label for="nome-cartao">Nome no Cartão:</label>
-            <input type="text" id="nome-cartao" name="nome-cartao" placeholder="Nome Completo">
-
-            <label for="validade-cartao">Validade:</label>
-            <input type="text" id="validade-cartao" name="validade-cartao" placeholder="MM/AA">
-
-            <label for="cvv-cartao">CVV:</label>
-            <input type="text" id="cvv-cartao" name="cvv-cartao" placeholder="123">
-        </div>
-
-        <!-- Campos para VR/VA -->
-        <div id="campos-vr-va" class="campos-pagamento">
-            <label for="codigo-vr-va">Código do Vale:</label>
-            <input type="text" id="codigo-vr-va" name="codigo-vr-va" placeholder="Código do Vale">
-        </div>
-
-        <button type="submit">Finalizar Pagamento</button>
-    </form>
-</section>
 
 
-    <!-- Nova Seção do Mapa -->
-    <section id="mapa" class="map-section">
-        <h2>Onde Estamos</h2>
-        <div class="map-container">
-            <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658502213!3d-23.565734367638155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621559476144!5m2!1spt-BR!2sbr"
-  width="100%" 
-  height="400" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy">
-</iframe>
-        </div>
-    </section>
 
-    <!-- Rodapé Original -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Endereço</h3>
-                <p>Av. Paulista, 2295 - Bela Vista, São Paulo - SP, 01311-300</p>
-            </div>
-            <div class="footer-section">
-                <h3>Horário de Funcionamento</h3>
-                <p>Segunda a Sábado: 12h às 23h</p>
-                <p>Domingo: 12h às 18h</p>
-            </div>
-            <div class="footer-section">
-                <h3>Redes Sociais</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <img
+                        src="logo.png"
+                        alt="Coração de Mãe"
+                    >
+
+                    <div>
+
+                        <strong>
+                            Coração de Mãe
+                        </strong>
+
+                        <span>
+                            Gastronomia afetiva
+                        </span>
+
+                    </div>
+
                 </div>
+
+
+                <p>
+                    Sabor que lembra casa.
+                    Memórias que ficam.
+                </p>
+
+
+                <div class="footer-social">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
             </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2025 Coração de Mãe. Todos os direitos reservados.
+                </span>
+
+                <a href="#home">
+                    Voltar ao topo
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
         </div>
-        <p>&copy; 2025 Coração de Mãe. Todos os direitos reservados.</p>
+
     </footer>
 
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
     <script src="script.js"></script>
+
 </body>
 </html>
