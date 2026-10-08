@@ -1,3 +1,22 @@
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+const pageLoader = document.querySelector('#pageLoader');
+
+window.addEventListener('load', () => {
+    if (!pageLoader) return;
+
+    setTimeout(() => {
+        pageLoader.classList.add('hidden');
+
+        setTimeout(() => {
+            pageLoader.remove();
+        }, 500);
+    }, 300);
+});
+
 /* =========================================================
 CORAÇÃO DE MÃE
 JavaScript — ATUALIZADO 2026 - NEM LEMBRAVA MAIS DISSO AQUI KKKKKKKK
@@ -15,9 +34,9 @@ const body = document.body;
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-const tabButtons = document.querySelectorAll('.tab-button');
+const tabButtons = document.querySelectorAll('.category-btn, .tab-button');
 const menuCategories = document.querySelectorAll('.menu-category');
-const menuItems = document.querySelectorAll('.menu-item');
+const menuItems = document.querySelectorAll('.food-card, .menu-item');
 
 const carrinhoContainer = document.querySelector('#itens-carrinho');
 const totalElement = document.querySelector('#total');
@@ -192,7 +211,7 @@ tabButtons.forEach(button => {
 
             category.classList.remove('active');
 
-            if (category.classList.contains(categoria)) {
+            if (category.dataset.category === categoria) {
                 category.classList.add('active');
             }
 
